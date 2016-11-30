@@ -89,6 +89,14 @@ $(function(){
       if(num>=3){
           $(".jiant").css("display","none");
       }
+      $("#images").css({
+          marginTop:-num*cliH,
+      })
+      $(".btnBox li").css({
+          background:"rgba(0,0,0,0)"
+      }).eq(num).css({
+          background:"#2F6289"
+      })
       $("#images").css({marginTop:-num*cliH});
   })
 
@@ -104,18 +112,13 @@ $(function(){
 
 
   $(".btnBox li").click(function(){
-     var index=$(this).index();
-      if(num>=3){
-          $(".jiant").css("display","none");
-      }else{
-          $(".jiant").css("display","block");
-      }
+     num=$(this).index();
       $("#images").css({
-          marginTop:-index*cliH,
+          marginTop:-num*cliH,
       })
       $(".btnBox li").css({
           background:"rgba(0,0,0,0)"
-      }).eq(index).css({
+      }).eq(num).css({
           background:"#2F6289"
       })
   })
