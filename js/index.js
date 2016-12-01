@@ -65,17 +65,17 @@ $(function(){
      for(var i= 0;i<4;i++){
          if(i==num-1){
              $(".descript").eq(num-1).css({
-                 animation:"left 2s linear forwards"
+                 animation:"left 1s linear forwards"
              })
              $(".two-tu").eq(num-1).css({
-                 animation:"right 2s linear forwards"
+                 animation:"right 1s linear forwards"
              })
          }else{
              $(".descript").eq(i).css({
-                 animation:"left1 2s linear forwards"
+                 animation:"left1 1s linear forwards"
              });
              $(".two-tu").eq(i).css({
-                 animation:"right1 2s linear forwards"
+                 animation:"right1 1s linear forwards"
              })
 
          }
@@ -184,7 +184,7 @@ $(function(){
 
 
    setInterval(function(){
-       var cliW=$(window).width();
+       var cliW=$(window).height();
        $(".row").css({
            height:cliH,
        })
@@ -277,6 +277,25 @@ $(function(){
         $(this).css({marginTop:-num*cliH});
     })
 
+
+    var flag3=true;
+    $(".header").click(function(){
+        if(flag3){
+            $("header .erweim").slideDown(500);
+            flag3=false;
+        }else{
+            $("header .erweim").slideUp(500);
+            flag3=true;
+        }
+
+    })
+
+    $(".code").click(function(){
+
+            $(".header-min .erweim").slideToggle(500);
+
+
+    })
 
 
 
