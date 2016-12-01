@@ -242,6 +242,11 @@ $(function(){
             return;
         }
         flag=false;
+        if(num>=3){
+            $(".jiant").css("display","none");
+        }else{
+            $(".jiant").css("display","block");
+        }
         $(".btnBox li").css({
             background:"rgba(0,0,0,0)"
         }).eq(num).css({
@@ -257,14 +262,19 @@ $(function(){
             num=$("section").length-1;
             return;
         }
+        flag=false;
+
+        if(num>=3){
+            $(".jiant").css("display","none");
+        }else{
+            $(".jiant").css("display","block");
+        }
         $(".btnBox li").css({
             background:"rgba(0,0,0,0)"
         }).eq(num).css({
             background:"#2F6289"
         })
         $(this).css({marginTop:-num*cliH});
-        flag=false;
-
     })
 
 
